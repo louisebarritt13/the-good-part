@@ -5,25 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Good Part | Intimate Wedding Planning</title>
 <link href="https://fonts.googleapis.com/css2?family=Amoresa&family=Noto+Sans+Myanmar:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
 :root{
---green:#44604f;
---beige:#d9d8c3;
---white:#ffffff;
---soft:#f3f3ee;
+  --green:#44604f;
+  --beige:#d9d8c3;
+  --white:#ffffff;
+  --soft:#f3f3ee;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans Myanmar',sans-serif;background:var(--beige);color:#2f2f2f;line-height:1.6;}
 header{background:rgba(68,96,79,0.95);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;backdrop-filter:blur(10px);z-index:10;}
-.logo img{height:80px;}
+.logo img{height:120px;}
 nav a{color:white;margin-left:24px;text-decoration:none;font-size:13px;letter-spacing:1px;text-transform:uppercase;}
 h1,h2,h3{font-family:'Amoresa',serif;}
-.hero{height:85vh;background:url('Untitled design (2).jpg') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white;position:relative;}
+.hero{height:85vh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:white;}
+.hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;}
 .hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.35);}
 .hero-content{position:relative;max-width:700px;}
-.hero h1{font-family:'Amoresa',serif;font-size:56px;margin-bottom:10px;}
+.hero h1{font-size:56px;margin-bottom:10px;}
 .tagline{font-size:18px;margin-bottom:26px;}
 .btn{background:var(--green);color:white;padding:14px 28px;border-radius:40px;text-decoration:none;font-size:14px;letter-spacing:1px;}
 section{padding:50px 8%;opacity:0;transform:translateY(40px);transition:all 0.9s ease;}
@@ -50,135 +50,152 @@ footer{text-align:center;padding:28px;font-size:13px;}
 .positioning{background:var(--soft);border-radius:18px;margin:40px 8%;padding:45px 8%;}
 .positioning-box{max-width:720px;margin:auto;font-size:18px;text-align:center;}
 .positioning-box p{margin-bottom:16px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;max-width:1000px;margin:auto;}
+.gallery-grid img{width:100%;border-radius:12px;object-fit:cover;transition:transform 0.5s;}
+.gallery-grid img:hover{transform:scale(1.05);}
 @media(max-width:800px){.about{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo"><img src="12.svg" alt="The Good Part Logo"></div>
-<nav>
-<a href="#story">Story</a>
-<a href="#positioning">Why We're Different</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Enquire</a>
-</nav>
+  <div class="logo"><img src="12.svg" alt="The Good Part Logo"></div>
+  <nav>
+    <a href="#story">Story</a>
+    <a href="#positioning">Why We're Different</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Enquire</a>
+  </nav>
 </header>
 
 <section class="hero visible">
-<div class="hero-content">
-<h1>The Good Part</h1>
-<div class="tagline">Helping couples skip the stress and get straight to the good part.</div>
-<a class="btn" href="#contact">Start Planning</a>
-</div>
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1>The Good Part</h1>
+    <div class="tagline">Helping couples skip the stress and get straight to the good part.</div>
+    <a class="btn" href="#contact">Start Planning</a>
+  </div>
 </section>
 
 <section id="story">
-<h2 class="section-title">Why I Created The Good Part</h2>
-<div class="story">
-<p>Planning a wedding should feel exciting — not overwhelming. After planning my own intimate wedding, I realised how many couples just want a celebration that feels relaxed, personal and meaningful.</p>
-<p>The Good Part exists to help couples ignore the pressure, focus on what actually matters, and create weddings that feel truly like them.</p>
-</div>
+  <h2 class="section-title">Why I Created The Good Part</h2>
+  <div class="story">
+    <p>Planning a wedding should feel exciting — not overwhelming. After planning my own intimate wedding, I realised how many couples just want a celebration that feels relaxed, personal and meaningful.</p>
+    <p>The Good Part exists to help couples ignore the pressure, focus on what actually matters, and create weddings that feel truly like them.</p>
+  </div>
 </section>
 
 <section id="positioning" class="positioning">
-<h2 class="section-title">Not Every Couple Wants a Traditional Wedding</h2>
-<div class="positioning-box">
-<p>Some couples want the big ballroom, the rigid schedule and every tradition. But many don’t.</p>
-<p>Many couples want something calmer. More personal. A wedding that feels like a meaningful celebration rather than a production.</p>
-<p><strong>That’s where The Good Part comes in.</strong> I help couples focus on the atmosphere, the people and the moments that actually matter.</p>
-</div>
+  <h2 class="section-title">Not Every Couple Wants a Traditional Wedding</h2>
+  <div class="positioning-box">
+    <p>Some couples want the big ballroom, the rigid schedule and every tradition. But many don’t.</p>
+    <p>Many couples want something calmer. More personal. A wedding that feels like a meaningful celebration rather than a production.</p>
+    <p><strong>That’s where The Good Part comes in.</strong> I help couples focus on the atmosphere, the people and the moments that actually matter.</p>
+  </div>
 </section>
 
 <section id="services">
-<h2 class="section-title">How I Help</h2>
-<div class="services">
-<div class="card">
-<h3>Full / Partial Planning</h3>
-<p>Hands-on support designing, organising and bringing your wedding together from start to finish.</p>
-</div>
-<div class="card">
-<h3>DIY Wedding Planning Package</h3>
-<p>Guidance and structure for couples planning their own wedding but wanting expert help along the way.</p>
-</div>
-<div class="card">
-<h3>Planning Power Hour</h3>
-<p>A focused session to solve problems, refine ideas or get clarity on your wedding plans.</p>
-</div>
-<div class="card">
-<h3>Digital Guide for DIY Couples</h3>
-<p>A practical digital resource helping couples confidently plan their own wedding.</p>
-</div>
-</div>
+  <h2 class="section-title">How I Help</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Full / Partial Planning</h3>
+      <p>Hands-on support designing, organising and bringing your wedding together from start to finish.</p>
+    </div>
+    <div class="card">
+      <h3>DIY Wedding Planning Package</h3>
+      <p>Guidance and structure for couples planning their own wedding but wanting expert help along the way.</p>
+    </div>
+    <div class="card">
+      <h3>Planning Power Hour</h3>
+      <p>A focused session to solve problems, refine ideas or get clarity on your wedding plans.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Guide for DIY Couples</h3>
+      <p>A practical digital resource helping couples confidently plan their own wedding.</p>
+    </div>
+  </div>
 </section>
 
 <section>
-<h2 class="section-title">Add-On Services</h2>
-<div class="addons">
-<div class="addon">
-<h3>On-The-Day Coordination</h3>
-<p>Includes a final planning meeting, supplier confirmations, timeline management and coordination of suppliers on the wedding day.</p>
-</div>
-<div class="addon">
-<h3>Wedding Timeline Creation</h3>
-<p>A custom wedding day schedule ensuring the entire day runs smoothly.</p>
-</div>
-<div class="addon">
-<h3>Venue Setup / Styling Support</h3>
-<p>Extra help ensuring your venue looks exactly as you imagined.</p>
-</div>
-</div>
+  <h2 class="section-title">Add-On Services</h2>
+  <div class="addons">
+    <div class="addon">
+      <h3>On-The-Day Coordination</h3>
+      <p>Includes a final planning meeting, supplier confirmations, timeline management and coordination of suppliers on the wedding day.</p>
+    </div>
+    <div class="addon">
+      <h3>Wedding Timeline Creation</h3>
+      <p>A custom wedding day schedule ensuring the entire day runs smoothly.</p>
+    </div>
+    <div class="addon">
+      <h3>Venue Setup / Styling Support</h3>
+      <p>Extra help ensuring your venue looks exactly as you imagined.</p>
+    </div>
+  </div>
 </section>
 
 <section id="about">
-<div class="about">
-<img src="Untitled design.jpg" alt="Louise personal photo">
-<div class="about-text">
-<h3>Hi, I'm Louise</h3>
-<p>I created The Good Part after planning my own wedding and realising how overwhelming the process can feel.</p>
-<p>What I loved most about our wedding wasn't the details — it was the moments, the people, and the feeling of everything coming together.</p>
-<p>Now I help other couples create weddings that focus on exactly that — the good part.</p>
-</div>
-</div>
+  <div class="about">
+    <img src="Untitled design.jpg" alt="Louise personal photo">
+    <div class="about-text">
+      <h3>Hi, I'm Louise</h3>
+      <p>I created The Good Part after planning my own wedding and realising how overwhelming the process can feel.</p>
+      <p>What I loved most about our wedding wasn't the details — it was the moments, the people, and the feeling of everything coming together.</p>
+      <p>Now I help other couples create weddings that focus on exactly that — the good part.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2 class="section-title">My Dream Clients</h2>
-<div class="dream">
-<p>The Good Part is for couples who want a wedding that feels personal rather than performative.</p>
-<ul>
-<li>You care more about the atmosphere than the traditions.</li>
-<li>You want a relaxed, meaningful celebration.</li>
-<li>You like thoughtful details but don’t want planning to take over your life.</li>
-<li>You want the day to feel like you.</li>
-</ul>
-</div>
+<section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+    <img src="gallery1.jpg" alt="Wedding inspiration">
+    <img src="gallery2.jpg" alt="Wedding inspiration">
+    <img src="gallery3.jpg" alt="Wedding inspiration">
+    <img src="gallery4.jpg" alt="Wedding inspiration">
+  </div>
 </section>
 
 <section id="contact">
-<h2 class="section-title">Start Planning</h2>
-<div class="form-section">
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="text" placeholder="Wedding Location">
-<input type="text" placeholder="Estimated Guest Count">
-<textarea placeholder="Tell me a little about your plans"></textarea>
-<button type="submit">Send Enquiry</button>
-</form>
-</div>
+  <h2 class="section-title">Start Planning</h2>
+  <div class="form-section">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Wedding Location">
+      <input type="text" placeholder="Estimated Guest Count">
+      <textarea placeholder="Tell me a little about your plans"></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-© 2026 The Good Part
+  © 2026 The Good Part
 </footer>
 
 <script>
+// Scroll reveal
 const sections = document.querySelectorAll('section');
-const reveal = () => { const trigger = window.innerHeight * 0.85; sections.forEach(sec => { const top = sec.getBoundingClientRect().top; if(top < trigger){sec.classList.add('visible');} }); }
+const reveal = () => {
+  const trigger = window.innerHeight * 0.85;
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < trigger){sec.classList.add('visible');}
+  });
+};
 window.addEventListener('scroll', reveal);
 reveal();
+
+// Hero parallax
+const heroText = document.querySelector('.hero-content');
+window.addEventListener('scroll', () => {
+  heroText.style.transform = `translateY(${window.scrollY * 0.25}px)`;
+});
 </script>
 
 </body>
