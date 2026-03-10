@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>The Good Part | Wedding Planning</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,14 +17,10 @@
 --soft:#f5f4ec;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-font-family:'Inter', sans-serif;
+font-family:'Inter',sans-serif;
 background:var(--beige);
 color:#333;
 line-height:1.6;
@@ -40,19 +36,12 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:14px 6%;
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(10px);
+background:#44604f;
 z-index:1000;
-transition:all .3s ease;
-}
-
-header.scrolled{
-padding:8px 6%;
-box-shadow:0 4px 20px rgba(0,0,0,0.08);
 }
 
 .logo img{
-height:72px;
+height:70px;
 }
 
 nav a{
@@ -61,7 +50,7 @@ text-decoration:none;
 font-size:12px;
 letter-spacing:1.5px;
 text-transform:uppercase;
-color:#333;
+color:white;
 }
 
 /* HERO */
@@ -73,24 +62,12 @@ align-items:center;
 justify-content:center;
 text-align:center;
 position:relative;
-overflow:hidden;
 color:white;
+overflow:hidden;
 }
-.hero::after{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(
-rgba(68,96,79,0.65),
-rgba(68,96,79,0.55)
-);
-z-index:-1;
-}
-  
+
 .hero video{
 position:absolute;
-top:0;
-left:0;
 width:100%;
 height:100%;
 object-fit:cover;
@@ -101,62 +78,48 @@ z-index:-2;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.35);
+background:linear-gradient(
+rgba(68,96,79,0.6),
+rgba(68,96,79,0.6)
+);
 z-index:-1;
 }
 
-.hero-content{
-max-width:700px;
-animation:fadeUp 1.4s ease;
-}
-
 .hero h1{
-font-family:'Playfair Display', serif;
+font-family:'Playfair Display',serif;
 font-size:64px;
-font-weight:500;
-margin-bottom:14px;
+margin-bottom:16px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
 margin-bottom:28px;
 }
 
 .btn{
-background:var(--green);
-color:white;
+background:white;
+color:#44604f;
 padding:14px 30px;
 border-radius:40px;
 text-decoration:none;
-font-size:14px;
-letter-spacing:1px;
+font-weight:500;
 }
 
 /* SECTIONS */
 
 section{
 padding:90px 8%;
-opacity:0;
-transform:translateY(40px);
-transition:all .9s ease;
-}
-
-section.visible{
-opacity:1;
-transform:translateY(0);
 }
 
 .section-title{
-font-family:'Playfair Display', serif;
+font-family:'Playfair Display',serif;
 font-size:38px;
 text-align:center;
 margin-bottom:40px;
 }
 
-/* STORY */
-
-.story{
-max-width:720px;
+.center-text{
+max-width:700px;
 margin:auto;
 text-align:center;
 font-size:18px;
@@ -166,21 +129,47 @@ font-size:18px;
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:26px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:24px;
 margin-top:30px;
 }
 
 .card{
 background:white;
-padding:32px;
+padding:30px;
 border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
 .card h3{
-font-family:'Playfair Display', serif;
+font-family:'Playfair Display',serif;
 margin-bottom:10px;
+}
+
+/* EXPERIENCE */
+
+.experience{
+background:var(--soft);
+border-radius:16px;
+padding:70px 10%;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:16px;
+max-width:1000px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
 }
 
 /* ABOUT */
@@ -188,10 +177,10 @@ margin-bottom:10px;
 .about{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
+gap:40px;
 max-width:1000px;
 margin:auto;
+align-items:center;
 }
 
 .about img{
@@ -199,43 +188,22 @@ width:100%;
 border-radius:14px;
 }
 
-.about h3{
-font-family:'Playfair Display', serif;
-font-size:30px;
-margin-bottom:14px;
-}
+/* DREAM CLIENT */
 
-/* GALLERY */
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:16px;
-max-width:1000px;
+.dream{
+background:var(--soft);
+border-radius:16px;
+padding:60px;
+max-width:700px;
 margin:auto;
-}
-
-.gallery-grid img{
-width:100%;
-border-radius:12px;
-transition:transform .6s ease;
-}
-
-.gallery-grid img:hover{
-transform:scale(1.05);
+text-align:center;
 }
 
 /* CONTACT */
 
-.form-section{
-background:var(--soft);
-padding:50px;
-border-radius:16px;
-max-width:650px;
+.form{
+max-width:600px;
 margin:auto;
-}
-
-form{
 display:flex;
 flex-direction:column;
 gap:14px;
@@ -245,54 +213,34 @@ input,textarea{
 padding:14px;
 border-radius:8px;
 border:1px solid #ccc;
-font-family:inherit;
 }
 
 button{
-background:var(--green);
+background:#44604f;
 color:white;
 border:none;
 padding:14px;
 border-radius:30px;
-font-size:15px;
-cursor:pointer;
 }
 
 footer{
 text-align:center;
 padding:40px;
-font-size:13px;
-}
-
-/* ANIMATION */
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-@media(max-width:800px){
-.about{
-grid-template-columns:1fr;
-}
-.hero h1{
-font-size:44px;
-}
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header id="header">
+<header>
 
 <div class="logo">
 <img src="12.svg">
 </div>
 
 <nav>
-<a href="#story">Story</a>
 <a href="#services">Services</a>
 <a href="#about">About</a>
 <a href="#gallery">Gallery</a>
@@ -308,7 +256,7 @@ font-size:44px;
 <source src="hero-video.mp4" type="video/mp4">
 </video>
 
-<div class="hero-content">
+<div>
 
 <h1>The Good Part</h1>
 
@@ -321,17 +269,36 @@ font-size:44px;
 </section>
 
 
-<section id="story">
+<section>
 
 <h2 class="section-title">Why I Created The Good Part</h2>
 
-<div class="story">
+<div class="center-text">
 
-<p>Planning a wedding should feel exciting — not overwhelming.</p>
+Planning a wedding should feel exciting — not overwhelming.
 
-<p>After planning my own wedding, I realised how many couples just want something personal, relaxed and meaningful.</p>
+After planning my own wedding, I realised how many couples simply want a celebration that feels relaxed, meaningful and personal.
 
-<p>The Good Part exists to help couples focus on what matters most — the moments, the atmosphere and the people.</p>
+The Good Part exists to help couples focus on what matters most — the people, the atmosphere and the memories.
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2 class="section-title">Not Every Couple Wants a Traditional Wedding</h2>
+
+<div class="center-text">
+
+Some couples want the big ballroom and every tradition.
+
+But many couples want something calmer.
+
+More personal.
+
+A wedding that feels like a meaningful celebration rather than a production.
 
 </div>
 
@@ -346,23 +313,68 @@ font-size:44px;
 
 <div class="card">
 <h3>Full / Partial Planning</h3>
-<p>Hands-on support designing and managing your wedding.</p>
+<p>Hands-on support bringing your wedding together.</p>
 </div>
 
 <div class="card">
 <h3>DIY Wedding Planning Package</h3>
-<p>Expert guidance for couples planning their own wedding.</p>
+<p>Guidance for couples planning their own wedding.</p>
 </div>
 
 <div class="card">
 <h3>Planning Power Hour</h3>
-<p>A focused call to solve wedding planning problems quickly.</p>
+<p>A focused session to solve planning problems.</p>
 </div>
 
 <div class="card">
-<h3>Digital Guide</h3>
-<p>A practical digital resource for DIY couples.</p>
+<h3>Digital Wedding Guide</h3>
+<p>A practical guide for DIY couples.</p>
 </div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="experience">
+
+<h2 class="section-title">The Good Part Experience</h2>
+
+<p>
+
+Planning a wedding shouldn't feel overwhelming.
+
+When couples work with The Good Part, the focus isn't on ticking boxes — it's on creating a celebration that feels relaxed, personal and joyful.
+
+From the first ideas through to the final moments of your wedding day, the goal is simple:
+
+To remove the stress and help you focus on what matters most.
+
+The atmosphere.  
+The people.  
+The memories.
+
+The good part.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
 
 </div>
 
@@ -377,11 +389,15 @@ font-size:44px;
 
 <div>
 
-<h3>Hi, I'm Louise</h3>
+<h2 class="section-title">Meet Louise</h2>
 
-<p>I created The Good Part after planning my own wedding and realising how overwhelming the process can feel.</p>
+<p>
 
-<p>I now help couples focus on what truly matters — the atmosphere, the people and the moments that make a wedding unforgettable.</p>
+I created The Good Part after planning my own wedding and realising how overwhelming the process can feel.
+
+Now I help couples create weddings that feel personal, relaxed and meaningful.
+
+</p>
 
 </div>
 
@@ -390,16 +406,21 @@ font-size:44px;
 </section>
 
 
-<section id="gallery">
+<section>
 
-<h2 class="section-title">Gallery</h2>
+<div class="dream">
 
-<div class="gallery-grid">
+<h2 class="section-title">Who I Work Best With</h2>
 
-<img src="gallery1.jpg">
-<img src="gallery2.jpg">
-<img src="gallery3.jpg">
-<img src="gallery4.jpg">
+<p>
+
+The Good Part is for couples who:
+
+• want a relaxed celebration  
+• care more about atmosphere than tradition  
+• want their wedding to feel personal  
+
+</p>
 
 </div>
 
@@ -410,23 +431,20 @@ font-size:44px;
 
 <h2 class="section-title">Start Planning</h2>
 
-<div class="form-section">
+<form class="form">
 
-<form>
+<input type="text" placeholder="Your Name">
 
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Email Address" required>
+<input type="email" placeholder="Email">
 
 <textarea placeholder="Tell me about your wedding"></textarea>
 
-<button type="submit">Send Enquiry</button>
+<button>Send Enquiry</button>
 
 </form>
 
-</div>
-
 </section>
+
 
 <footer>
 
@@ -434,42 +452,6 @@ font-size:44px;
 
 </footer>
 
-
-<script>
-
-const sections = document.querySelectorAll("section")
-
-const reveal = () => {
-
-const trigger = window.innerHeight * 0.85
-
-sections.forEach(sec=>{
-
-const top = sec.getBoundingClientRect().top
-
-if(top < trigger){
-
-sec.classList.add("visible")
-
-}
-
-})
-
-}
-
-window.addEventListener("scroll",reveal)
-
-reveal()
-
-const header = document.getElementById("header")
-
-window.addEventListener("scroll",()=>{
-
-header.classList.toggle("scrolled",window.scrollY > 40)
-
-})
-
-</script>
-
 </body>
+
 </html>
