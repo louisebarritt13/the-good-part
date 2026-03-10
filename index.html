@@ -17,7 +17,11 @@
 --soft:#f5f4ec;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Inter',sans-serif;
@@ -35,7 +39,7 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 6%;
+padding:12px 6%;
 background:#44604f;
 z-index:1000;
 }
@@ -45,7 +49,7 @@ height:70px;
 }
 
 nav a{
-margin-left:28px;
+margin-left:26px;
 text-decoration:none;
 font-size:12px;
 letter-spacing:1.5px;
@@ -66,8 +70,10 @@ color:white;
 overflow:hidden;
 }
 
-.hero video{
+.hero-video{
 position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
 object-fit:cover;
@@ -78,10 +84,7 @@ z-index:-2;
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(
-rgba(68,96,79,0.6),
-rgba(68,96,79,0.6)
-);
+background:rgba(68,96,79,0.45);
 z-index:-1;
 }
 
@@ -93,13 +96,13 @@ margin-bottom:16px;
 
 .hero p{
 font-size:20px;
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
 .btn{
 background:white;
 color:#44604f;
-padding:14px 30px;
+padding:14px 28px;
 border-radius:40px;
 text-decoration:none;
 font-weight:500;
@@ -108,18 +111,18 @@ font-weight:500;
 /* SECTIONS */
 
 section{
-padding:90px 8%;
+padding:70px 8%;
 }
 
 .section-title{
 font-family:'Playfair Display',serif;
-font-size:38px;
+font-size:36px;
 text-align:center;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .center-text{
-max-width:700px;
+max-width:720px;
 margin:auto;
 text-align:center;
 font-size:18px;
@@ -129,16 +132,16 @@ font-size:18px;
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
 margin-top:30px;
 }
 
 .card{
 background:white;
-padding:30px;
+padding:28px;
 border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .card h3{
@@ -150,11 +153,21 @@ margin-bottom:10px;
 
 .experience{
 background:var(--soft);
+padding:60px;
 border-radius:16px;
-padding:70px 10%;
-text-align:center;
-max-width:900px;
+max-width:850px;
 margin:auto;
+text-align:center;
+}
+
+/* PARALLAX */
+
+.parallax{
+background-image:url('gallery1.jpg');
+height:350px;
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
 /* GALLERY */
@@ -162,7 +175,7 @@ margin:auto;
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:16px;
+gap:14px;
 max-width:1000px;
 margin:auto;
 }
@@ -192,8 +205,8 @@ border-radius:14px;
 
 .dream{
 background:var(--soft);
-border-radius:16px;
 padding:60px;
+border-radius:16px;
 max-width:700px;
 margin:auto;
 text-align:center;
@@ -209,7 +222,7 @@ flex-direction:column;
 gap:14px;
 }
 
-input,textarea{
+input, textarea{
 padding:14px;
 border-radius:8px;
 border:1px solid #ccc;
@@ -221,11 +234,27 @@ color:white;
 border:none;
 padding:14px;
 border-radius:30px;
+cursor:pointer;
 }
 
 footer{
 text-align:center;
 padding:40px;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:44px;
+}
+
 }
 
 </style>
@@ -249,10 +278,11 @@ padding:40px;
 
 </header>
 
+<!-- HERO -->
 
 <section class="hero">
 
-<video autoplay muted loop playsinline>
+<video autoplay muted loop playsinline class="hero-video">
 <source src="hero-video.mp4" type="video/mp4">
 </video>
 
@@ -268,6 +298,7 @@ padding:40px;
 
 </section>
 
+<!-- STORY -->
 
 <section>
 
@@ -285,6 +316,7 @@ The Good Part exists to help couples focus on what matters most — the people, 
 
 </section>
 
+<!-- POSITIONING -->
 
 <section>
 
@@ -304,6 +336,7 @@ A wedding that feels like a meaningful celebration rather than a production.
 
 </section>
 
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -335,6 +368,7 @@ A wedding that feels like a meaningful celebration rather than a production.
 
 </section>
 
+<!-- EXPERIENCE -->
 
 <section>
 
@@ -350,11 +384,11 @@ When couples work with The Good Part, the focus isn't on ticking boxes — it's 
 
 From the first ideas through to the final moments of your wedding day, the goal is simple:
 
-To remove the stress and help you focus on what matters most.
+to remove the stress and help you focus on what matters most.
 
 The atmosphere.  
 The people.  
-The memories.
+The memories.  
 
 The good part.
 
@@ -364,10 +398,13 @@ The good part.
 
 </section>
 
+<div class="parallax"></div>
+
+<!-- GALLERY -->
 
 <section id="gallery">
 
-<h2 class="section-title">Gallery</h2>
+<h2 class="section-title">Inspiration</h2>
 
 <div class="gallery">
 
@@ -380,6 +417,7 @@ The good part.
 
 </section>
 
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -405,6 +443,7 @@ Now I help couples create weddings that feel personal, relaxed and meaningful.
 
 </section>
 
+<!-- DREAM CLIENT -->
 
 <section>
 
@@ -426,6 +465,7 @@ The Good Part is for couples who:
 
 </section>
 
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -445,13 +485,13 @@ The Good Part is for couples who:
 
 </section>
 
-
 <footer>
 
-© The Good Part
+© The Good Part Weddings
 
 </footer>
 
 </body>
+</html>
 
 </html>
