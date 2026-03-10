@@ -15,7 +15,7 @@
 :root{
 --green:#44604f;
 --beige:#d9d8c3;
---soft:#f6f5ef;
+--soft:#f4f3ea;
 }
 
 *{
@@ -40,17 +40,17 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px 6%;
-background:var(--green);
+padding:8px 6%;
+background:#44604f;
 z-index:1000;
 }
 
 .logo img{
-height:95px;
+height:120px;
 }
 
 nav a{
-margin-left:26px;
+margin-left:24px;
 text-decoration:none;
 font-size:12px;
 letter-spacing:1.5px;
@@ -76,24 +76,31 @@ position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
+z-index:-2;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(217,216,195,0.35);
 z-index:-1;
 }
 
 .hero h1{
-font-family:"Amoresa","Prandory Condensed", serif;
 font-size:72px;
-margin-bottom:14px;
+margin-bottom:16px;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
 .btn{
 background:white;
 color:#44604f;
-padding:14px 30px;
+padding:14px 32px;
 border-radius:40px;
 text-decoration:none;
 font-size:14px;
@@ -102,12 +109,11 @@ font-size:14px;
 /* GENERAL SECTIONS */
 
 section{
-padding:65px 8%;
+padding:70px 8%;
 }
 
 .section-title{
-font-family:"Amoresa","Prandory Condensed", serif;
-font-size:40px;
+font-size:38px;
 margin-bottom:25px;
 text-align:center;
 }
@@ -118,7 +124,7 @@ margin:auto;
 text-align:center;
 }
 
-/* SPLIT SECTION */
+/* SPLIT LAYOUT */
 
 .split{
 display:grid;
@@ -152,7 +158,6 @@ box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .service h3{
-font-family:"Amoresa","Prandory Condensed", serif;
 margin-bottom:8px;
 }
 
@@ -167,9 +172,9 @@ margin:auto;
 text-align:center;
 }
 
-/* SCROLL IMAGE */
+/* PARALLAX IMAGE */
 
-.scroll-image{
+.parallax{
 height:420px;
 background-image:url("parallax.jpg");
 background-size:cover;
@@ -182,7 +187,7 @@ background-attachment:fixed;
 .gallery{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:16px;
+gap:18px;
 max-width:1000px;
 margin:auto;
 }
@@ -221,11 +226,12 @@ border:1px solid #ccc;
 }
 
 button{
-background:var(--green);
+background:#44604f;
 color:white;
 border:none;
 padding:14px;
 border-radius:30px;
+cursor:pointer;
 }
 
 footer{
@@ -248,6 +254,10 @@ grid-template-columns:1fr;
 
 .hero h1{
 font-size:46px;
+}
+
+.logo img{
+height:90px;
 }
 
 }
@@ -273,7 +283,6 @@ font-size:46px;
 
 </header>
 
-
 <!-- HERO -->
 
 <section class="hero">
@@ -294,8 +303,7 @@ font-size:46px;
 
 </section>
 
-
-<!-- STORY SPLIT -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -311,7 +319,7 @@ font-size:46px;
 
 After planning my own wedding I realised how overwhelming the process can feel.
 
-Many couples don't want a rigid, traditional wedding — they want something personal, relaxed and meaningful.
+Many couples don't want a rigid, traditional wedding — they want something relaxed and personal.
 
 That's why I created The Good Part.
 
@@ -325,7 +333,6 @@ To help couples focus on what really matters.
 
 </section>
 
-
 <!-- POSITIONING -->
 
 <section>
@@ -336,18 +343,15 @@ To help couples focus on what really matters.
 
 <p>
 
-Some couples want the ballroom, the traditions and the formal structure.
+Some couples want the ballroom and every tradition.
 
-But many couples want something calmer.
-
-A celebration that feels personal, relaxed and full of meaning.
+But many couples want something calmer — a celebration that feels meaningful, personal and relaxed.
 
 </p>
 
 </div>
 
 </section>
-
 
 <!-- SERVICES -->
 
@@ -369,18 +373,17 @@ A celebration that feels personal, relaxed and full of meaning.
 
 <div class="service">
 <h3>Planning Power Hour</h3>
-<p>A focused session solving your planning challenges.</p>
+<p>A focused session solving planning challenges.</p>
 </div>
 
 <div class="service">
 <h3>Digital Wedding Guide</h3>
-<p>A step-by-step planning guide for DIY couples.</p>
+<p>A step-by-step guide for DIY couples.</p>
 </div>
 
 </div>
 
 </section>
-
 
 <!-- EXPERIENCE -->
 
@@ -394,7 +397,7 @@ A celebration that feels personal, relaxed and full of meaning.
 
 Working together should feel calm and supportive.
 
-From first ideas to the final moments of your wedding day, my role is to remove the overwhelm so you can focus on what matters most.
+From the first ideas to the final moments of your wedding day, my role is to remove the overwhelm so you can focus on what matters most.
 
 The people.  
 The atmosphere.  
@@ -408,11 +411,9 @@ The good part.
 
 </section>
 
-
 <!-- PARALLAX IMAGE -->
 
-<div class="scroll-image"></div>
-
+<div class="parallax"></div>
 
 <!-- GALLERY -->
 
@@ -430,7 +431,6 @@ The good part.
 
 </section>
 
-
 <!-- DREAM CLIENT -->
 
 <section>
@@ -443,7 +443,7 @@ The good part.
 
 The Good Part is for couples who:
 
-• want a relaxed, meaningful celebration  
+• want a relaxed celebration  
 • care more about atmosphere than tradition  
 • want a wedding that feels personal  
 
@@ -452,7 +452,6 @@ The Good Part is for couples who:
 </div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -474,7 +473,6 @@ The Good Part is for couples who:
 
 </section>
 
-
 <footer>
 
 © The Good Part Weddings
@@ -482,5 +480,4 @@ The Good Part is for couples who:
 </footer>
 
 </body>
-
 </html>
