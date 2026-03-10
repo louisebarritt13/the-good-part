@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Good Part | Wedding Planning</title>
+<title>The Good Part Weddings</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 --green:#44604f;
 --beige:#d9d8c3;
---soft:#f5f4ec;
+--soft:#f6f5ef;
 }
 
 *{
@@ -24,10 +25,10 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Inter',sans-serif;
+font-family:'Noto Sans Myanmar', sans-serif;
 background:var(--beige);
 color:#333;
-line-height:1.6;
+line-height:1.7;
 }
 
 /* NAV */
@@ -39,13 +40,13 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 6%;
-background:#44604f;
+padding:10px 6%;
+background:var(--green);
 z-index:1000;
 }
 
 .logo img{
-height:70px;
+height:95px;
 }
 
 nav a{
@@ -65,106 +66,112 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-position:relative;
 color:white;
+position:relative;
 overflow:hidden;
 }
 
-.hero-video{
+.hero video{
 position:absolute;
-top:0;
-left:0;
 width:100%;
 height:100%;
 object-fit:cover;
-z-index:-2;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(68,96,79,0.45);
 z-index:-1;
 }
 
 .hero h1{
-font-family:'Playfair Display',serif;
-font-size:64px;
-margin-bottom:16px;
+font-family:"Amoresa","Prandory Condensed", serif;
+font-size:72px;
+margin-bottom:14px;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:30px;
+margin-bottom:28px;
 }
 
 .btn{
 background:white;
 color:#44604f;
-padding:14px 28px;
+padding:14px 30px;
 border-radius:40px;
 text-decoration:none;
-font-weight:500;
+font-size:14px;
 }
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 section{
-padding:70px 8%;
+padding:65px 8%;
 }
 
 .section-title{
-font-family:'Playfair Display',serif;
-font-size:36px;
+font-family:"Amoresa","Prandory Condensed", serif;
+font-size:40px;
+margin-bottom:25px;
 text-align:center;
-margin-bottom:30px;
 }
 
-.center-text{
+.center{
 max-width:720px;
 margin:auto;
 text-align:center;
-font-size:18px;
+}
+
+/* SPLIT SECTION */
+
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+.split img{
+width:100%;
+border-radius:14px;
 }
 
 /* SERVICES */
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:22px;
-margin-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:24px;
+max-width:1000px;
+margin:auto;
 }
 
-.card{
+.service{
 background:white;
 padding:28px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-.card h3{
-font-family:'Playfair Display',serif;
-margin-bottom:10px;
+.service h3{
+font-family:"Amoresa","Prandory Condensed", serif;
+margin-bottom:8px;
 }
 
 /* EXPERIENCE */
 
 .experience{
 background:var(--soft);
-padding:60px;
-border-radius:16px;
+padding:70px;
+border-radius:18px;
 max-width:850px;
 margin:auto;
 text-align:center;
 }
 
-/* PARALLAX */
+/* SCROLL IMAGE */
 
-.parallax{
-background-image:url('gallery1.jpg');
-height:350px;
+.scroll-image{
+height:420px;
+background-image:url("parallax.jpg");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -174,29 +181,13 @@ background-attachment:fixed;
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:14px;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
 max-width:1000px;
 margin:auto;
 }
 
 .gallery img{
-width:100%;
-border-radius:12px;
-}
-
-/* ABOUT */
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-max-width:1000px;
-margin:auto;
-align-items:center;
-}
-
-.about img{
 width:100%;
 border-radius:14px;
 }
@@ -204,15 +195,16 @@ border-radius:14px;
 /* DREAM CLIENT */
 
 .dream{
-background:var(--soft);
+background:white;
 padding:60px;
 border-radius:16px;
-max-width:700px;
+max-width:720px;
 margin:auto;
 text-align:center;
+box-shadow:0 8px 24px rgba(0,0,0,0.06);
 }
 
-/* CONTACT */
+/* FORM */
 
 .form{
 max-width:600px;
@@ -229,12 +221,11 @@ border:1px solid #ccc;
 }
 
 button{
-background:#44604f;
+background:var(--green);
 color:white;
 border:none;
 padding:14px;
 border-radius:30px;
-cursor:pointer;
 }
 
 footer{
@@ -245,14 +236,18 @@ font-size:14px;
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
-.about{
+.split{
+grid-template-columns:1fr;
+}
+
+.gallery{
 grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:44px;
+font-size:46px;
 }
 
 }
@@ -278,11 +273,12 @@ font-size:44px;
 
 </header>
 
+
 <!-- HERO -->
 
 <section class="hero">
 
-<video autoplay muted loop playsinline class="hero-video">
+<video autoplay muted loop playsinline>
 <source src="hero-video.mp4" type="video/mp4">
 </video>
 
@@ -290,7 +286,7 @@ font-size:44px;
 
 <h1>The Good Part</h1>
 
-<p>Helping couples skip the stress and get straight to the good part.</p>
+<p>Helping couples skip the stress and get straight to the good part</p>
 
 <a class="btn" href="#contact">Start Planning</a>
 
@@ -298,23 +294,37 @@ font-size:44px;
 
 </section>
 
-<!-- STORY -->
 
-<section>
+<!-- STORY SPLIT -->
 
-<h2 class="section-title">Why I Created The Good Part</h2>
+<section id="about">
 
-<div class="center-text">
+<div class="split">
 
-Planning a wedding should feel exciting — not overwhelming.
+<img src="Untitled design.jpg">
 
-After planning my own wedding, I realised how many couples simply want a celebration that feels relaxed, meaningful and personal.
+<div>
 
-The Good Part exists to help couples focus on what matters most — the people, the atmosphere and the memories.
+<h2 class="section-title">Meet Louise</h2>
+
+<p>
+
+After planning my own wedding I realised how overwhelming the process can feel.
+
+Many couples don't want a rigid, traditional wedding — they want something personal, relaxed and meaningful.
+
+That's why I created The Good Part.
+
+To help couples focus on what really matters.
+
+</p>
+
+</div>
 
 </div>
 
 </section>
+
 
 <!-- POSITIONING -->
 
@@ -322,19 +332,22 @@ The Good Part exists to help couples focus on what matters most — the people, 
 
 <h2 class="section-title">Not Every Couple Wants a Traditional Wedding</h2>
 
-<div class="center-text">
+<div class="center">
 
-Some couples want the big ballroom and every tradition.
+<p>
+
+Some couples want the ballroom, the traditions and the formal structure.
 
 But many couples want something calmer.
 
-More personal.
+A celebration that feels personal, relaxed and full of meaning.
 
-A wedding that feels like a meaningful celebration rather than a production.
+</p>
 
 </div>
 
 </section>
+
 
 <!-- SERVICES -->
 
@@ -344,29 +357,30 @@ A wedding that feels like a meaningful celebration rather than a production.
 
 <div class="services">
 
-<div class="card">
+<div class="service">
 <h3>Full / Partial Planning</h3>
-<p>Hands-on support bringing your wedding together.</p>
+<p>Support bringing every part of your wedding together.</p>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>DIY Wedding Planning Package</h3>
-<p>Guidance for couples planning their own wedding.</p>
+<p>Guidance for couples planning their own celebration.</p>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Planning Power Hour</h3>
-<p>A focused session to solve planning problems.</p>
+<p>A focused session solving your planning challenges.</p>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Digital Wedding Guide</h3>
-<p>A practical guide for DIY couples.</p>
+<p>A step-by-step planning guide for DIY couples.</p>
 </div>
 
 </div>
 
 </section>
+
 
 <!-- EXPERIENCE -->
 
@@ -378,17 +392,13 @@ A wedding that feels like a meaningful celebration rather than a production.
 
 <p>
 
-Planning a wedding shouldn't feel overwhelming.
+Working together should feel calm and supportive.
 
-When couples work with The Good Part, the focus isn't on ticking boxes — it's on creating a celebration that feels relaxed, personal and joyful.
+From first ideas to the final moments of your wedding day, my role is to remove the overwhelm so you can focus on what matters most.
 
-From the first ideas through to the final moments of your wedding day, the goal is simple:
-
-to remove the stress and help you focus on what matters most.
-
-The atmosphere.  
 The people.  
-The memories.  
+The atmosphere.  
+The memories.
 
 The good part.
 
@@ -398,7 +408,11 @@ The good part.
 
 </section>
 
-<div class="parallax"></div>
+
+<!-- PARALLAX IMAGE -->
+
+<div class="scroll-image"></div>
+
 
 <!-- GALLERY -->
 
@@ -411,37 +425,11 @@ The good part.
 <img src="gallery1.jpg">
 <img src="gallery2.jpg">
 <img src="gallery3.jpg">
-<img src="gallery4.jpg">
 
 </div>
 
 </section>
 
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="about">
-
-<img src="Untitled design.jpg">
-
-<div>
-
-<h2 class="section-title">Meet Louise</h2>
-
-<p>
-
-I created The Good Part after planning my own wedding and realising how overwhelming the process can feel.
-
-Now I help couples create weddings that feel personal, relaxed and meaningful.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- DREAM CLIENT -->
 
@@ -455,15 +443,16 @@ Now I help couples create weddings that feel personal, relaxed and meaningful.
 
 The Good Part is for couples who:
 
-• want a relaxed celebration  
+• want a relaxed, meaningful celebration  
 • care more about atmosphere than tradition  
-• want their wedding to feel personal  
+• want a wedding that feels personal  
 
 </p>
 
 </div>
 
 </section>
+
 
 <!-- CONTACT -->
 
@@ -485,6 +474,7 @@ The Good Part is for couples who:
 
 </section>
 
+
 <footer>
 
 © The Good Part Weddings
@@ -492,6 +482,5 @@ The Good Part is for couples who:
 </footer>
 
 </body>
-</html>
 
 </html>
