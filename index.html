@@ -25,7 +25,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Noto Sans Myanmar', sans-serif;
+font-family:'Noto Sans Myanmar',sans-serif;
 background:var(--beige);
 color:#333;
 line-height:1.7;
@@ -40,13 +40,13 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:8px 6%;
+padding:10px 6%;
 background:#44604f;
 z-index:1000;
 }
 
 .logo img{
-height:120px;
+height:110px;
 }
 
 nav a{
@@ -83,12 +83,12 @@ z-index:-2;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(217,216,195,0.35);
+background:rgba(68,96,79,0.45);
 z-index:-1;
 }
 
 .hero h1{
-font-size:72px;
+font-size:70px;
 margin-bottom:16px;
 }
 
@@ -100,21 +100,21 @@ margin-bottom:30px;
 .btn{
 background:white;
 color:#44604f;
-padding:14px 32px;
+padding:14px 30px;
 border-radius:40px;
 text-decoration:none;
 font-size:14px;
 }
 
-/* GENERAL SECTIONS */
+/* SECTIONS */
 
 section{
-padding:70px 8%;
+padding:80px 8%;
 }
 
 .section-title{
-font-size:38px;
-margin-bottom:25px;
+font-size:40px;
+margin-bottom:30px;
 text-align:center;
 }
 
@@ -124,27 +124,11 @@ margin:auto;
 text-align:center;
 }
 
-/* SPLIT LAYOUT */
-
-.split{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-max-width:1100px;
-margin:auto;
-}
-
-.split img{
-width:100%;
-border-radius:14px;
-}
-
 /* SERVICES */
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:24px;
 max-width:1000px;
 margin:auto;
@@ -152,13 +136,21 @@ margin:auto;
 
 .service{
 background:white;
-padding:28px;
+padding:30px;
 border-radius:14px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .service h3{
-margin-bottom:8px;
+margin-bottom:10px;
+font-size:20px;
+}
+
+/* PARALLAX */
+
+.parallax{
+height:420px;
+background:url("parallax.jpg") center/cover no-repeat fixed;
 }
 
 /* EXPERIENCE */
@@ -172,14 +164,21 @@ margin:auto;
 text-align:center;
 }
 
-/* PARALLAX IMAGE */
+/* SPLIT */
 
-.parallax{
-height:420px;
-background-image:url("parallax.jpg");
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+max-width:1000px;
+margin:auto;
+}
+
+.split img{
+width:100%;
+max-width:380px;
+border-radius:14px;
 }
 
 /* GALLERY */
@@ -187,14 +186,14 @@ background-attachment:fixed;
 .gallery{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px;
-max-width:1000px;
+gap:16px;
+max-width:900px;
 margin:auto;
 }
 
 .gallery img{
 width:100%;
-border-radius:14px;
+border-radius:12px;
 }
 
 /* DREAM CLIENT */
@@ -234,10 +233,17 @@ border-radius:30px;
 cursor:pointer;
 }
 
-footer{
-text-align:center;
-padding:40px;
-font-size:14px;
+/* SCROLL REVEAL */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all .9s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
@@ -246,6 +252,7 @@ font-size:14px;
 
 .split{
 grid-template-columns:1fr;
+text-align:center;
 }
 
 .gallery{
@@ -253,7 +260,7 @@ grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:46px;
+font-size:44px;
 }
 
 .logo img{
@@ -303,9 +310,91 @@ height:90px;
 
 </section>
 
+<!-- POSITIONING -->
+
+<section class="reveal">
+
+<h2 class="section-title">Not Every Couple Wants a Traditional Wedding</h2>
+
+<div class="center">
+
+<p>
+
+Some couples want the ballroom and every tradition.
+
+But many couples want something calmer — a celebration that feels meaningful, relaxed and completely personal.
+
+The Good Part exists to help couples create weddings that feel true to them.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="reveal">
+
+<h2 class="section-title">How I Help</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>Full / Partial Planning</h3>
+<p>From supplier recommendations to timeline planning, I help bring every moving part of your wedding together.</p>
+</div>
+
+<div class="service">
+<h3>DIY Wedding Planning Package</h3>
+<p>Perfect for couples planning their own celebration but wanting expert guidance along the way.</p>
+</div>
+
+<div class="service">
+<h3>Planning Power Hour</h3>
+<p>A focused session to solve planning problems and bring clarity to your next steps.</p>
+</div>
+
+<div class="service">
+<h3>Digital Wedding Guide</h3>
+<p>A step-by-step guide designed to help DIY couples plan with confidence.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PARALLAX -->
+
+<div class="parallax"></div>
+
+<!-- EXPERIENCE -->
+
+<section class="reveal">
+
+<div class="experience">
+
+<h2 class="section-title">The Good Part Experience</h2>
+
+<p>
+
+Working together should feel calm and supportive.
+
+From the first ideas through to the final moments of your wedding day, my role is to remove the overwhelm so you can focus on what matters most.
+
+The people.  
+The atmosphere.  
+The memories.
+
+</p>
+
+</div>
+
+</section>
+
 <!-- ABOUT -->
 
-<section id="about">
+<section id="about" class="reveal">
 
 <div class="split">
 
@@ -319,11 +408,7 @@ height:90px;
 
 After planning my own wedding I realised how overwhelming the process can feel.
 
-Many couples don't want a rigid, traditional wedding — they want something relaxed and personal.
-
-That's why I created The Good Part.
-
-To help couples focus on what really matters.
+I created The Good Part to help couples enjoy the planning journey and create celebrations that feel personal, relaxed and meaningful.
 
 </p>
 
@@ -332,92 +417,10 @@ To help couples focus on what really matters.
 </div>
 
 </section>
-
-<!-- POSITIONING -->
-
-<section>
-
-<h2 class="section-title">Not Every Couple Wants a Traditional Wedding</h2>
-
-<div class="center">
-
-<p>
-
-Some couples want the ballroom and every tradition.
-
-But many couples want something calmer — a celebration that feels meaningful, personal and relaxed.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2 class="section-title">How I Help</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>Full / Partial Planning</h3>
-<p>Support bringing every part of your wedding together.</p>
-</div>
-
-<div class="service">
-<h3>DIY Wedding Planning Package</h3>
-<p>Guidance for couples planning their own celebration.</p>
-</div>
-
-<div class="service">
-<h3>Planning Power Hour</h3>
-<p>A focused session solving planning challenges.</p>
-</div>
-
-<div class="service">
-<h3>Digital Wedding Guide</h3>
-<p>A step-by-step guide for DIY couples.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section>
-
-<div class="experience">
-
-<h2 class="section-title">The Good Part Experience</h2>
-
-<p>
-
-Working together should feel calm and supportive.
-
-From the first ideas to the final moments of your wedding day, my role is to remove the overwhelm so you can focus on what matters most.
-
-The people.  
-The atmosphere.  
-The memories.
-
-The good part.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- PARALLAX IMAGE -->
-
-<div class="parallax"></div>
 
 <!-- GALLERY -->
 
-<section id="gallery">
+<section id="gallery" class="reveal">
 
 <h2 class="section-title">Inspiration</h2>
 
@@ -433,7 +436,7 @@ The good part.
 
 <!-- DREAM CLIENT -->
 
-<section>
+<section class="reveal">
 
 <div class="dream">
 
@@ -455,9 +458,9 @@ The Good Part is for couples who:
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section id="contact" class="reveal">
 
-<h2 class="section-title">Start Planning</h2>
+<h2 class="section-title">Start Planning Your Wedding</h2>
 
 <form class="form">
 
@@ -465,7 +468,11 @@ The Good Part is for couples who:
 
 <input type="email" placeholder="Email">
 
-<textarea placeholder="Tell me about your wedding"></textarea>
+<input type="text" placeholder="Wedding date (if known)">
+
+<input type="text" placeholder="Venue (if booked)">
+
+<textarea placeholder="Tell me about your plans"></textarea>
 
 <button>Send Enquiry</button>
 
@@ -473,11 +480,27 @@ The Good Part is for couples who:
 
 </section>
 
-<footer>
+<script>
 
-© The Good Part Weddings
+function reveal(){
+let reveals=document.querySelectorAll(".reveal")
 
-</footer>
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight
+let elementTop=reveals[i].getBoundingClientRect().top
+let elementVisible=120
+
+if(elementTop<windowHeight-elementVisible){
+reveals[i].classList.add("active")
+}
+
+}
+}
+
+window.addEventListener("scroll",reveal)
+
+</script>
 
 </body>
 </html>
